@@ -18,7 +18,7 @@ export class CarreraRepository {
 
   async getAllCount(page: number): Promise<CarreraCount[]> {
     const query = `
-      SELECT COUNT(a.id_carrera) as alumnos, c.id_carrera, c.nombre, c.fecha_creacion, c.observaciones
+      SELECT COUNT(a.id_carrera) as cantidad_alumnos, c.codigo, c.nombre, c.fecha_creacion, c.observaciones
       FROM carrera c
       JOIN alumn a ON c.id_carrera = a.id_carrera
       GROUP BY c.id_carrera

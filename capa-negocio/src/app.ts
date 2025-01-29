@@ -1,4 +1,5 @@
 import express, { Request, Response } from 'express'
+import cors from 'cors'
 import dotenv from 'dotenv'
 dotenv.config()
 
@@ -8,6 +9,7 @@ const SERVICE_URL = process.env.SERVICE_URL
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
 app.get('/carrera/all', async (req: Request, res: Response) => {
   const response = await fetch(`${SERVICE_URL}/carrera/all`)
