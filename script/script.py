@@ -3,8 +3,11 @@ import pymysql
 import random
 
 db = pymysql.connections.Connection(
-  user="root", password="PaIUBCocDKSyJFxOQIbYnoPqCXuautzz", database="railway",
-  host="mysql.railway.internal", port=3306
+  user="",
+  password="",
+  database="",
+  host="",
+  port=3306
 )
 
 fake = Faker("es_ES")
